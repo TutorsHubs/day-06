@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.container {
+    padding-left: 8%;
+    padding-right: 8%;
+
+    /* padding: 0 8%; */
+}
+
+#main,
+#projects,
+#about {
+    width: 100%;
+    height: 100vh;
+}
+
+/* #main {
+    background-color: red;
+} */
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 500ms ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: orange;
+}
+
+/* CONTENTS */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content .content-details,
+.content .content-image {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content .content-details {
+    padding-top: 15%;
+    padding-left: 8%;
+
+    /* Cannot be overriden */
+    text-align: left !important;
+}
+
+.content .content-image {
+    padding-top: 9%;
+    padding-right: 8%;
+}
+
+.btn {
+    padding: 15px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: orange;
+}
+
+.my-image {
+    width: 300px;
+}
+
+#projects {
+    background-color: #999;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 8%;
+}
+
+.project-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-details {
+    display: flex;
+    align-items: center;
+}
+
+.project-details div h1,
+.project-details div p,
+.project-details div .project-btn {
+    margin-top: 20px;
+}
+
+.project-btn {
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    background-color: orange;
+    color: #fff;
+}
+
+#about {
+    padding: 0 8%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-details {
+    display: flex;
+    align-items: center;
+}
+
+.about-btn {
+    padding: 15px;
+    background-color: orange;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.about-image {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+    #projects,
+    #about {
+        grid-template-columns: 1fr;
+    }
+
+    #main,
+    #projects,
+    #about {
+        height: auto;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main,
+    #projects,
+    #about {
+        width: 100vw;
+    }
+}
